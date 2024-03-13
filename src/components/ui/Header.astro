@@ -1,0 +1,24 @@
+---
+
+
+const { title, waterMarkColor, text, waterMark, linkText, linkColor } = Astro.props
+
+---
+
+
+<div class={`relative overflow-hidden`}>
+
+    <div class=" w-[95%] mx-auto z-30 pt-36">
+        <div>
+            {title && <h2 class={`uppercase text-3xl font-semibold text-clementine-500`}>{title}</h2>}
+            {text && <p class="leading-8 my-4">{text}</p>}
+        </div>
+        <aside class="my-8 font-semibold">
+            {linkText && <a class={`uppercase underline_animation after:${linkColor} `}href="#">{linkText}<svg class="inline-block -mt-1 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22"><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg></a>}
+        </aside>
+    </div>
+    {waterMark && <span class={`absolute top-0 left-0 text-[160px] ${waterMarkColor} leading-[.9] z-10 font-bold`}>
+        {waterMark}
+    </span>}
+
+</div>

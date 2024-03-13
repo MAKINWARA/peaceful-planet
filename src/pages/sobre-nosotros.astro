@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/ui/Header.astro'
+
+interface Biography {
+  name: string
+  role: string
+  bio: string
+  image: string
+}
+
+const biography = [
+  {
+    name: 'Norge Cedeño Raffo',
+    role: 'Director Artístico',
+    bio: 'Norge Cedeño Raffo, nacido en La Habana, Cuba, es un bailarín, coreógrafo y director artístico. Graduado de la Escuela Nacional de Ballet de Cuba, Norge ha trabajado con compañías de danza de renombre internacional, incluyendo el Ballet Nacional de Cuba, el Ballet de Monterrey, el Ballet de la Ópera de Viena, el Ballet de la Ópera de Berlín, el Ballet de la Ópera de París, el Ballet de la Ópera de Roma, el Ballet de la Ópera de Budapest, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava, el Ballet de la Ópera de Sofía, el Ballet de la Ópera de Belgrado, el Ballet de la Ópera de Bucarest, el Ballet de la Ópera de Ljubljana, el Ballet de la Ópera de Liubliana, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava, el Ballet de la Ópera de Sofía, el Ballet de la Ópera de Belgrado, el Ballet de la Ópera de Bucarest, el Ballet de la Ópera de Ljubljana, el Ballet de la Ópera de Liubliana, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava, el Ballet de la Ópera de Sofía, el Ballet de la Ópera de Belgrado, el Ballet de la Ópera de Bucarest, el Ballet de la Ópera de Ljubljana, el Ballet de la Ópera de Liubliana, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava',
+    image: '/team/norge_profile.webp'
+  },
+  {
+    name: 'Thais Suárez',
+    role: 'Directora Artística',
+    bio: 'Thais Suárez, nacida en La Habana, Cuba, es una bailarina, coreógrafa y directora artística. Graduada de la Escuela Nacional de Ballet de Cuba, Thais ha trabajado con compañías de danza de renombre internacional, incluyendo el Ballet Nacional de Cuba, el Ballet de Monterrey, el Ballet de la Ópera de Viena, el Ballet de la Ópera de Berlín, el Ballet de la Ópera de París, el Ballet de la Ópera de Roma, el Ballet de la Ópera de Budapest, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava, el Ballet de la Ópera de Sofía, el Ballet de la Ópera de Belgrado, el Ballet de la Ópera de Bucarest, el Ballet de la Ópera de Ljubljana, el Ballet de la Ópera de Liubliana, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava, el Ballet de la Ópera de Sofía, el Ballet de la Ópera de Belgrado, el Ballet de la Ópera de Bucarest, el Ballet de la Ópera de Ljubljana, el Ballet de la Ópera de Liubliana, el Ballet de la Ópera de Zagreb, el Ballet de la Ópera de Riga, el Ballet de la Ópera de Bratislava',
+    image: '/team/thais_profile.webp'
+  }
+] as Biography[]
+---
+
+<script></script>
+
+<Layout title='OtroLado || Sobre Nosotros'>
+  <main class='pt-20'>
+    <Header
+      title='Sobre Nosotros'
+      waterMark='OLDC'
+      waterMarkColor='text-alto-200'
+    />
+    <section>
+      <img
+        src='/sobre_nosotros/salon.webp'
+        alt=''
+        class='w-full h-96 object-cover'
+      />
+      <div class='w-[95%] mx-auto'>
+        <p class='uppercase py-6 text-base/loose'>
+          Le invitamos a estar al corriente de nuestras novedades y no perderse
+          ningún detalle de nuestras presentaciones, giras.
+        </p>
+        <p class='pb-6'>
+          En julio del 2018, un pequeño grupo de jóvenes artistas, se dio cita
+          en un estudio de La Habana, Cuba, para trabajar en un nuevo proyecto.
+          No podían ser más singulares y diferentes, pero les unían talentos
+          forjados en la curiosidad y la ambición artística, un compromiso sin
+          límites con la creación y el deseo de transformar la danza cubana.
+          Comenzó entonces un período de investigación que desembocó en las
+          primeras piezas creadas para Thais Suárez y Niosbel González, quienes
+          liderados por el bailarín y coreógrafo Norge Cedeño, desafiaban las
+          formas de pensar y hacer la danza en la isla. Estas primeras
+          producciones sentaron las bases para una colaboración dinámica, que
+          desembocó meses después en la fundación de OtroLado Dance Company.
+          Motivados a amplificar la esencia cultural de su nación, de su gente,
+          y crecer en el aprendizaje por la colaboración con los mejores
+          artistas de cada disciplina del arte, comenzó un viaje sin precedentes
+          que no deja de sorprendernos hasta hoy. Las reglas eran simples: tomar
+          riesgos pensar en grande, y retar los límites del cuerpo y la mente
+          para crear obras de arte sin precedentes, tan maravillosas e
+          impredecibles cómo la vida misma. Para hacerlo posible fue necesario
+          poner a prueba todo conocimiento heredado, abrazar la incertidumbre,
+          sorprenderse para sorprender; trascender fórmulas creativas y
+          exponerse a una búsqueda sin līmites, donde cada día represena una
+          oportunidad para evolucionar. Nació una danza de detalles, virtuosa y
+          competitiva al más alto nivel. Una danza seductora, emocionante, que
+          surge en lo más profundo del sentimiento, capaz de amplificar la
+          esencia del espíritu humano. Vio la luz una danza híbrida, llena de la
+          sinuosidad inherente del foclor cubano y toda la belleza y capacidad
+          de las más variadas formas de movilidad. pero sobre todo nació una
+          visión capaz de trascender la mera danza toda para crear universos
+          únicos para la audiencia.
+        </p>
+      </div>
+      {
+        biography.map((bio) => {
+          return (
+            <article class='bg-alto-100 mb-4'>
+              <figure>
+                <img
+                  src={bio.image}
+                  alt=''
+                />
+              </figure>
+              <div class='p-8'>
+                <>
+                  <h2 class='inline-block text-xl mb-2 font-semibold'>
+                    {bio.name}
+                  </h2>
+                  <span class='text-clementine-500'> / {bio.role}</span>
+                </>
+                <p class=' text-wrap'>{bio.bio}</p>
+              </div>
+            </article>
+          )
+        })
+      }
+    </section>
+    <Header
+      title='Equipo'
+      waterMark='EQUIPO'
+      waterMarkColor='text-alto-200'
+    />
+  </main>
+</Layout>

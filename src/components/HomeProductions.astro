@@ -1,0 +1,51 @@
+---
+import { detectScreenWidth } from '../utils/detectWidth'
+import Slider from './Slider'
+import Header from './ui/Header.astro'
+---
+
+<section class='bg-alto-200 py-12'>
+  <Header
+    title='03_Producciones'
+    waterMark='03_'
+    text='Explora cada producción pasada y presente. Navega al interior de nuestro repertorio, sus historias, sus personajes y descubre como se manifiesta la magia.'
+    linkText='Producciones'
+    linkColor='bg-black'
+    waterMarkColor='text-alto-50'
+  />
+
+  <Slider client:visible />
+</section>
+
+<style>
+  /* // .grid_container {
+//   display: grid;
+//   grid-template-columns: repeat(2, 100px) 50px repeat(2, 100px);
+//   grid-template-rows: 200px 100px 100px 200px 50px;
+//   gap: 20px;
+// }
+
+// .item1 {
+//   grid-column: span 3;
+//   grid-row: 1 / 3;
+// }
+
+// .item2 {
+//   grid-column: span 2;
+// }
+
+// .item3 {
+//   grid-column: span 2;
+//   grid-row: 3 / 5;
+// }
+
+// .item4 {
+//   grid-column: span 2;
+//   grid-row: 2 / 4;
+// }
+
+// .item5 {
+//   grid-column: span 3;
+//   grid-row: 4 / -1;
+// } */
+</style>

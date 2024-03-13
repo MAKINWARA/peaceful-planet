@@ -1,0 +1,13 @@
+export const company_members = [
+  {
+    first_name: 'Norge',
+    last_name: 'Cedeño Raffo',
+    age: 36,
+    phone_number: '+5358275440',
+    ci: '8707202586',
+    email: 'ncrnorgee@gmail.com',
+    rol: ['CEO', 'Coreografo', 'Director'],
+    address: '5852 47 Ave, La Ceiba, La Habana, Cuba, 11300',
+    bio: "Graduado de Danza Moderna, Contemporánea y Folklórica de la Escuela Nacional de Arte en 2005, de la Universidad de las Artes con Título de Oro en 2017. Trabajó como bailarín y coreógrafo en compañías como Codanza y el Teatro Lírico Rodrigo Prats, pero es en Danza Contemporánea de Cuba (DCC) donde desarrolla una carrera llena de singularidad entre 2008 y 2018, convirtiéndose en una de las figuras más reconocidas dentro del panorama interpretativo nacional. Galardones como la Medalla por la Cultura Nacional, el Grand Prix Vladimir Malakhov, el Premio de la ciudad de Holguín (“Baibrama”) Premio Codanza, Premio Espiral, el lauro como Mejor Intérprete Masculino Nacional, en la categoría Danza Contemporánea, y el Premio Villanueva de la Crítica de la Unión de Escritores y Artistas de Cuba, entre muchos otros, reconocen su trayectoria artística. Varias de los más relevantes escenarios alrededor del mundo como el Sadler's Wells (Londres), Opera de Montecarlo, Teatro Real (Madrid), Maison de la Danse (Lyon),Kennedy Center for the Performing Arts (Washington D.C.), New York City Center, Auditorio Nacional (Ciudad de México), Teatro Berna (Berna) y muchos otros en una veintena de países, han sido testigos de su actuación y talento.Ha interpretado roles principales de coreógrafos tales como Mats Ek, Itzik Galili, Jan Linkens, Juan Kruz Díaz de Garaio, Fleur Darkin, Annabelle López Ochoa, Rafael Bonachela, Theo Clinkard, Angels Margarit, Billy Cowie, George Céspedes, Julio César Iglesias y otros tantos. El constante intercambio y colaboración con varios de los más distinguidos creadores de la danza nacional e internacional, cimentaron ;el desarrollo de una visión propia, cada vez más amplificada en el repertorio de compañías alrededor del mundo. Gauthier Dance Company (Alemania), La Fondazione Nazionale della Danza Aterballetto (Italia),Birmingham Royal Ballet (Reino Unido) y otros tantas compañías nacionales como Danza Contemporánea de Cuba, Acosta Danza, Codanza entre otras, han servido de laboratorio para sus creaciones. En julio de 2018, luego de separarse de DCC, junto a un singular grupo de artistas fundan lo *que hoy se conoce como OTROLADO DANCE COMPANY, una de las propuestas más interesantes y potentes de la escena danzaria actual. En este gran laboratorio ha creado casi una veintena de obras a través de las cuales, ha sido posible radicalizar su visión; expandiendo los límites del cuerpo y la mente ."
+  }
+]

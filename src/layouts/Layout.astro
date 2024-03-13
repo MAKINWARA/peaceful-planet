@@ -1,0 +1,81 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+
+import { ViewTransitions } from 'astro:transitions'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer.astro'
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='Astro description'
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+    <title>{title}</title>
+    <slot name='preload' />
+    <ViewTransitions />
+  </head>
+  <body>
+    <NavBar client:load />
+    <slot />
+    <Footer />
+
+    <style is:global>
+      @font-face {
+        font-family: Montserrat;
+        src: url('/fonts/Montserrat-VariableFont_wght.ttf');
+      }
+
+      body {
+        font-family: Montserrat;
+        max-width: 430px;
+        margin: 0 auto;
+        scroll-behavior: smooth;
+      }
+
+      .underline_animation {
+        display: inline-block;
+        position: relative;
+      }
+
+      .underline_animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .underline_animation:hover::after,
+      .underline_animation:focus:after {
+        cursor: pointer;
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    </style>
+  </body>
+</html>

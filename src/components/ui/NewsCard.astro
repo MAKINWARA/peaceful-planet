@@ -1,0 +1,18 @@
+---
+
+
+const {title, date, location, img} = Astro.props
+---
+
+<section class="w-[95%] mx-auto ">
+    <figure class="w-full h-96">
+        <img src={img} alt="" class="w-full h-full object-cover">
+    </figure>
+    <div class="pt-6 pb-8">
+        <a href="" class="text-xl">
+            <h4 class="mb-3">{title}</h4>
+        </a>
+        <p class="text-clementine-500">{date}</p>
+        <p>{location}</p>
+    </div>
+</section>
